@@ -1,0 +1,5 @@
+FC = gfortran
+FCSYNTAXONLY = -fsyntax-only
+FCFLAGS = -fimplicit-none -fdefault-real-8 -fdefault-double-8 -Wall -Wextra -Wconversion -Wrealloc-lhs-all -finit-real=snan -finit-integer=-999 -finit-character=63 -O3  -march=native -ffast-math -fno-protect-parens -fstack-arrays -fopenmp -flto
+
+include ../../makefiles/common.mk

@@ -1,0 +1,11 @@
+VPATH = ../../src
+FC = ifort
+FCSYNTAXONLY = -fsyntax-only
+
+#-prof-gen=srcpos -prof-gen=globdata -profile-functions -profile-loops=all -profile-loops-report=2
+#-prof-use -prof-func-group
+
+FCFLAGS = -implicitnone -r8 -autodouble -warn all -mkl -no-wrap-margin -fast -parallel -openmp
+LDFLAGS = 
+
+include ../../makefiles/common.mk

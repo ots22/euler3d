@@ -1,0 +1,10 @@
+./domain.o ./m_domain.mod : ../../src/domain.f90 ./m_error.mod 
+./eos.o ./m_eos.mod : ../../src/eos.f90 ./m_state.mod 
+./error.o ./m_error.mod : ../../src/error.f90 
+./flux.o ./m_flux.mod : ../../src/flux.f90 ./m_state.mod ./m_eos.mod 
+./main.o ./m_simulation_data.mod ./m_config.mod : ../../src/main.f90 ./m_output.mod ./m_eos.mod ./m_timestepping.mod ./m_state.mod ./m_domain.mod 
+./m_hllc.o ./m_hllc.mod : ../../src/m_hllc.f90 ./m_flux.mod ./m_eos.mod ./m_state.mod 
+./output.o ./m_output.mod : ../../src/output.f90 ./m_eos.mod ./m_state.mod ./m_domain.mod 
+./reconstruct.o ./m_reconstruct.mod : ../../src/reconstruct.f90 ./m_state.mod 
+./state.o ./m_state.mod : ../../src/state.f90 
+./timestepping.o ./m_timestepping.mod : ../../src/timestepping.f90 ./m_hllc.mod ./m_flux.mod ./m_eos.mod ./m_state.mod ./m_domain.mod ./m_reconstruct.mod 
